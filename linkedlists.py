@@ -25,6 +25,21 @@ class LinkedList:
 
 		self.tail = new_node
 
+	def RemoveNode(self, location):
+		prev = None
+		node = self.head
+		counter = 0
+
+		while (counter < location) and (node != None):
+			prev = node
+			node = node.next
+			counter += 1
+
+		if prev == None:
+			self.head = node.next
+		else:
+			prev.next = node.next
+
 	def PrintList(self):
 		node = self.head
 

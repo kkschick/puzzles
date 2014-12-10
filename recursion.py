@@ -99,59 +99,61 @@ def sum_list(lst):
     return lst[0] + sum_list(lst[1:])
 
 
-def reverse(lst):
-    """Reverse a list recursively, without loops, reverse() function or list[::-1].
+# def reverse(lst):
+#     """Reverse a list recursively, without loops, reverse() function or list[::-1].
 
-    >>> reverse([1, 2, 3, 4])
-    [4, 3, 2, 1]
+#     >>> reverse([1, 2, 3, 4])
+#     [4, 3, 2, 1]
 
-    >>> reverse([])
-    []
-    """
-
-    if lst == []:
-        return []
-    return
-
-
-# def fibonacci(n):
-#     """Return the nth fibonacci number.
-
-#     The nth fibonacci number is defined as:
-
-#        fibonacci(n) = fibonacci(n-1) + fibonacci(n-2)
-
-#     Use recursion to solve this.
-
-#     >>> fibonacci(1)
-#     1
-
-#     >>> fibonacci(2)
-#     1
-
-#     >>> fibonacci(3)
-#     2
-
-#     >>> fibonacci(4)
-#     3
-
-#     >>> fibonacci(5)
-#     5
-
-#     >>> fibonacci(6)
-#     8
-
-#     >>> fibonacci(7)
-#     13
-
-#     >>> fibonacci(8)
-#     21
-
-#     >>> fibonacci(9)
-#     34
+#     >>> reverse([])
+#     []
 #     """
 
-#     pass
+#     if lst == []:
+#         return []
+#     return [lst[-1], reverse(lst[0:-1])]
+
+
+def fibonacci(n):
+    """Return the nth fibonacci number.
+
+    The nth fibonacci number is defined as:
+
+       fibonacci(n) = fibonacci(n-1) + fibonacci(n-2)
+
+    Use recursion to solve this.
+
+    >>> fibonacci(1)
+    1
+
+    >>> fibonacci(2)
+    1
+
+    >>> fibonacci(3)
+    2
+
+    >>> fibonacci(4)
+    3
+
+    >>> fibonacci(5)
+    5
+
+    >>> fibonacci(6)
+    8
+
+    >>> fibonacci(7)
+    13
+
+    >>> fibonacci(8)
+    21
+
+    >>> fibonacci(9)
+    34
+    """
+
+    if n == 1 or n == 2:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)
 
 
 # def find(lst, i):
